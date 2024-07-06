@@ -7,16 +7,16 @@ create_logs() {
 }
 
 case "$1" in
-  --date)
+  --date|-d)
     date
     ;;
-  --logs)
+  --logs|-l)
     count=${2:-100}
     create_logs $count
     ;;
-  --help)
-    echo "--date - wyświetla dzisiejszą datę"
-    echo "--logs [liczba] - tworzy [liczba] plików logx.txt"
+  --help|-h)
+    echo "--date -d - wyświetla dzisiejszą datę"
+    echo "--logs -l [liczba] - tworzy [liczba] plików logx.txt"
     ;;
   *)
     echo "Nieznana opcja: $1"
