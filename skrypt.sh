@@ -17,6 +17,11 @@ case "$1" in
   --help|-h)
     echo "--date -d - wyświetla dzisiejszą datę"
     echo "--logs -l [liczba] - tworzy [liczba] plików logx.txt"
+    echo "--init - klonuje repozytorium i ustawia PATH"
+    ;;
+  --init)
+    git clone https://github.com/TwojeKonto/Lab4-Git.git
+    export PATH=$PATH:$(pwd)/Lab4-Git
     ;;
   *)
     echo "Nieznana opcja: $1"
