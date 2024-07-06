@@ -14,6 +14,10 @@ case "$1" in
     count=${2:-100}
     create_logs $count
     ;;
+  --help)
+    echo "--date - wyświetla dzisiejszą datę"
+    echo "--logs [liczba] - tworzy [liczba] plików logx.txt"
+    ;;
   *)
     echo "Nieznana opcja: $1"
     ;;
